@@ -21,7 +21,7 @@ export const useHttpClient = () => {
 
         const responseData = await response.json();
 
-        // remove the httpAbortCtrl that just complated
+        // remove the httpAbortCtrl that just completed
         activeHttpRequests.current = activeHttpRequests.current.filter(
           (reqCtrl) => reqCtrl !== httpAbortCtrl
         );

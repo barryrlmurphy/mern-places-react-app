@@ -81,9 +81,10 @@ const Auth = () => {
           }
         );
 
-        auth.login(responseData.user.id);
+        auth.login(responseData.userId, responseData.token);
       } catch (err) {}
     } else {
+      // Signup Mode
       try {
         // use FormData API to pass text inputs + an image
         const formData = new FormData();
@@ -97,7 +98,7 @@ const Auth = () => {
           formData
         );
 
-        auth.login(responseData.user.id);
+        auth.login(responseData.userId, responseData.token);
       } catch (err) {}
     }
   };
