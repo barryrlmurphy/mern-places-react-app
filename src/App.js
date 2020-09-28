@@ -72,7 +72,7 @@ const App = () => {
     >
       <Router>
         <MainNavigation />
-        <main>
+        <main className="center">
           <Suspense
             fallback={
               <div className="center">
